@@ -10,7 +10,7 @@ The Platforms I work on daily:
 - [treesitter](#treesitter)
 - [telescope](#telescope)
 
-#### treesitter
+### treesitter
 
 This config uses treesitter requiring a C compiler to be installed.
 
@@ -28,7 +28,7 @@ Just use [clang](https://packages.fedoraproject.org/pkgs/llvm/clang/)
 sudo dnf install clang
 ```
 
-#### telescope
+### telescope
 
 I use some grep features requiring the use of [ripgrep](https://github.com/BurntSushi/ripgrep#installation).
 
