@@ -1,5 +1,3 @@
--- vim.opt.guicusor = ""
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -14,7 +12,12 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("USERPROFILE") .. "/.vim/undodir"
+if vim.loop.os_uname().sysname == "Linux" then
+	vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+end
+if vim.loop.os_uname().sysname == "Windows" then
+	vim.opt.undodir = os.getenv("USERPROFILE") .. "/.vim/undodir"
+end
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
@@ -31,4 +34,3 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
-

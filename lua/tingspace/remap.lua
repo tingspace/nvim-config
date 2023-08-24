@@ -36,7 +36,10 @@ vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
 vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz')
 vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
 
+-- I'll be honest, I have no idea what this does
 -- vim.keymap.set('n', '<leader>s', ":%s/\\<<C-r><C-w>\\>
---
+
 -- Also only usable on Unix systems
--- vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true })
+if vim.loop.os_uname().sysname == "Linux" then
+	vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true })
+end
