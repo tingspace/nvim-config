@@ -7,8 +7,8 @@ The Platforms I work on daily:
 - Fedora (Linux)
 
 ## PRE-REQUISITES
-- treesitter
-- telescope
+- [treesitter](#treesitter)
+- [telescope](#telescope)
 
 #### treesitter
 
