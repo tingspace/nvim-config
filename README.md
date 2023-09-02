@@ -7,8 +7,15 @@ The Platforms I work on daily:
 - Fedora (Linux)
 
 ## PRE-REQUISITES
+- [lualine](#lualine)
 - [treesitter](#treesitter)
 - [telescope](#telescope)
+
+### lualine
+
+This requires an extended font collection to be installed and used in the Terminal. I chose the `Roboto Mono` font from [Nerd Fonts](https://www.nerdfonts.com/font-downloads).
+
+If you don't install the font and set it in your Terminal, you'll get some wonky artifacts when it doesn't recognise the characters.
 
 ### treesitter
 
