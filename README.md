@@ -4,6 +4,7 @@ My ever-evolving config for NeoVim
 
 The Platforms I work on daily:
 - Windows
+- Windows Subsystem for Linux (Ubuntu)
 - Fedora (Linux)
 
 ## PRE-REQUISITES
@@ -27,12 +28,18 @@ Depending on my mood, I use either:
 - [MSVC (Visual Studio with C++ workloads)](https://visualstudio.microsoft.com/vs/features/cplusplus/)
 - [zig](https://ziglang.org/)
 
-**For Fedora;**
+**For Fedora & Ubuntu;**
 
 Just use [clang](https://packages.fedoraproject.org/pkgs/llvm/clang/)
 
+Fedora:
 ```sh
 sudo dnf install clang
+```
+
+Ubuntu:
+```sh
+sudo apt install clang
 ```
 
 ### telescope
@@ -41,13 +48,12 @@ I use some grep features requiring the use of [ripgrep](https://github.com/Burnt
 
 ## Packages
 
-Package manager: [Packer](https://github.com/wbthomason/packer.nvim)
+Package manager: [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 Packages:
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [catppuccin/nvim Theme](https://github.com/catppuccin/nvim)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [treesitter-playground](https://github.com/nvim-treesitter/playground)
 - [ThePrimeagen/harpoon](https://github.com/ThePrimeagen/harpoon)
 - [undotree](https://github.com/mbbill/undotree)
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
