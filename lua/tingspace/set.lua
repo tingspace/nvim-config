@@ -8,19 +8,24 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+-- Wrapping so that I can see the full inline errors
+vim.opt.wrap = true
 
+-- I have no idea what this does
 vim.opt.swapfile = false
 vim.opt.backup = false
-if vim.loop.os_uname().sysname == "Linux" then
+
+local sysname = vim.loop.os_uname().sysname
+if sysname == "Linux" then
 	vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 end
-if vim.loop.os_uname().sysname == "Windows" then
+if sysname == "Windows" then
 	vim.opt.undodir = os.getenv("USERPROFILE") .. "/.vim/undodir"
 end
+
 vim.opt.undofile = true
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
@@ -31,4 +36,6 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
+-- I might kill this...
 vim.opt.colorcolumn = "80"
+
