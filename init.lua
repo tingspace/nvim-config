@@ -57,6 +57,11 @@ local plugins = {
     },
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {},
+    },
 }
 
 require("lazy").setup(plugins)

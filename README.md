@@ -63,4 +63,4 @@ Packages:
     - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
     - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - [lualine](https://github.com/nvim-lualine/lualine.nvim)
-
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
