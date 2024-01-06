@@ -1,6 +1,6 @@
 # nvim-config
 
-My ever-evolving config for NeoVim
+My ever-evolving config for [neovim](https://neovim.io/)
 
 The Platforms I work on daily:
 - Windows
