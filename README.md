@@ -7,48 +7,32 @@ The Platforms I work on daily:
 - Windows Subsystem for Linux (Ubuntu)
 - Fedora (Linux)
 
-## PRE-REQUISITES
-- [lualine](#lualine)
-- [treesitter](#treesitter)
-- [telescope](#telescope)
 
-### lualine
+## Getting Started
 
-This requires an extended font collection to be installed and used in the Terminal. I chose the `Roboto Mono` font from [Nerd Fonts](https://www.nerdfonts.com/font-downloads).
+There are some packages that require some items to be installed first. First we install these things, then get the nvim config
 
-If you don't install the font and set it in your Terminal, you'll get some wonky artifacts when it doesn't recognise the characters.
+1. Install Neovim 0.9.0 or higher
+2. Install `Roboto Mono` font from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+3. Install a C compiler 
+    - Windows: [Visual Studio with C++ workloads](https://visualstudio.microsoft.com/vs/features/cplusplus/)
+    - Linux: [clang](https://packages.fedoraproject.org/pkgs/llvm/clang/)
+4. Install [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+5. Delete (or rename) any existing `nvim` directory in your config path
+    - Windows: `%USERPROFILE%/AppData/Local`
+    - Linux: `~/.config`
+6. Clone this repo and create a new `nvim` in the config path
+    ```shell
+    git clone git@github.com:tingspace/nvim-config.git nvim
+    ```
+7. `cd` into the new `nvim` directory
+8. Open `nvim` in this directory (Run: `nvim .`)
+9. Ensure [lazy.nvim](https://github.com/folke/lazy.nvim) installs itself and required plugins
 
-### treesitter
-
-This config uses treesitter requiring a C compiler to be installed.
-
-**For Windows;**
-
-Depending on my mood, I use either:
-- [MSVC (Visual Studio with C++ workloads)](https://visualstudio.microsoft.com/vs/features/cplusplus/)
-- [zig](https://ziglang.org/)
-
-**For Fedora & Ubuntu;**
-
-Just use [clang](https://packages.fedoraproject.org/pkgs/llvm/clang/)
-
-Fedora:
-```sh
-sudo dnf install clang
-```
-
-Ubuntu:
-```sh
-sudo apt install clang
-```
-
-### telescope
-
-I use some grep features requiring the use of [ripgrep](https://github.com/BurntSushi/ripgrep#installation).
 
 ## Packages
 
-Package manager: [lazy.nvim](https://github.com/folke/lazy.nvim)
+Current Package manager: [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 Packages:
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
