@@ -2,6 +2,9 @@
 
 My ever-evolving config for [neovim](https://neovim.io/)
 
+> [!NOTE]
+> I am a beginner to Vim & Neovim. Still learning how to configure Neovim via Lua, I do not know VimScript
+
 The Platforms I work on daily:
 - Windows
 - Windows Subsystem for Linux (Ubuntu)
