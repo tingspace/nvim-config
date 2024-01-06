@@ -22,7 +22,7 @@ There are some packages that require some items to be installed first. First we 
     - Linux: [clang](https://packages.fedoraproject.org/pkgs/llvm/clang/)
 4. Install [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 5. Delete (or rename) any existing `nvim` directory in your config path
-    - Windows: `%USERPROFILE%/AppData/Local`
+    - Windows: `%USERPROFILE%\AppData\Local`
     - Linux: `~/.config`
 6. Clone this repo and create a new `nvim` in the config path
     ```shell
