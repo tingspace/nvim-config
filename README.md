@@ -24,9 +24,14 @@ There are some packages that require some items to be installed first. First we 
 5. Delete (or rename) any existing `nvim` directory in your config path
     - Windows: `%USERPROFILE%\AppData\Local`
     - Linux: `~/.config`
-6. Clone this repo and create a new `nvim` in the config path
+6. Clone this repo into the same path with the directory name as: `nvim`
+    *nix:
     ```shell
-    git clone git@github.com:tingspace/nvim-config.git nvim
+    git clone git@github.com:tingspace/nvim-config.git ~/.config/nvim
+    ```
+    Windows:
+    ```powershell
+    git clone git@github.com:tingspace/nvim-config.git "$env:USERPROFILE\AppData\Local\nvim"
     ```
 7. `cd` into the new `nvim` directory
 8. Open `nvim` in this directory (Run: `nvim .`)
