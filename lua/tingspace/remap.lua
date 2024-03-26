@@ -47,3 +47,6 @@ end)
 if vim.loop.os_uname().sysname == "Linux" then
 	vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 end
+
+vim.api.nvim_create_user_command("W", "w", {})
+vim.api.nvim_create_user_command("Q", "q", {})
