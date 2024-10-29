@@ -35,7 +35,7 @@ return {
             cmp.setup({
                 formatting = lsp_zero.cmp_format(),
                 mapping = cmp.mapping.preset.insert({
-                    ["<CR>"] = cmp.mapping.confirm({ select = false }),
+                    ["<Tab>"] = cmp.mapping.confirm({ select = false }),
                     ["<C-Space>"] = cmp.mapping.complete(),
                     ["<C-f>"] = cmp_action.luasnip_jump_forward(),
                     ["<C-b>"] = cmp_action.luasnip_jump_backward(),
@@ -77,6 +77,7 @@ return {
                 vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
                 vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
                 vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+                vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format() end, opts)
             end)
 
             require('mason-lspconfig').setup({
@@ -106,6 +107,46 @@ return {
                                 vim.api.nvim_create_autocmd('BufWritePre', {
                                     buffer = bufnr,
                                     command = "EslintFixAll"
+                                })
+                            end
+                        })
+                    end,
+
+                    pylsp = function()
+                        require('lspconfig').pylsp.setup({
+                            on_attach = function(client, bufnr)
+                                vim.api.nvim_create_autocmd('BufWritePre', {
+                                    buffer = bufnr,
+                                    callback = function ()
+                                        vim.lsp.buf.format()
+                                    end
+                                })
+                            end
+                        })
+                    end,
+
+                    powershell_es = function()
+                        print("farts")
+                        local home_directory = os.getenv('HOME')
+                        if home_directory == nil then
+                            home_directory = os.getenv('USERPROFILE')
+                        end
+                        local bundle_path = home_directory .. '/AppData'
+                        bundle_path = bundle_path .. '/Local/nvim-data'
+                        bundle_path = bundle_path .. '/mason/packages'
+                        bundle_path = bundle_path .. '/powershell-editor-services'
+
+                        --local bp = vim.fn.stdpath "data" .. "/mason/packages/powershell-editor-services"
+
+                        require('lspconfig').powershell_es.setup({
+                            bundle_path = bundle_path,
+                            settings = { powershell = { codeFormatting = { Preset = 'OTBS' } } },
+                            on_attach = function(client, bufnr)
+                                vim.api.nvim_create_autocmd('BufWritePre', {
+                                    buffer = bufnr,
+                                    callback = function(ev)
+                                        vim.lsp.buf.format()
+                                    end
                                 })
                             end
                         })
