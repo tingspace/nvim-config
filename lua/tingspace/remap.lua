@@ -28,7 +28,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
--- Treat Ctrl + C the same as Esc in Normal mode
+-- Treat Ctrl + C the same as Esc in Insert mode
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
