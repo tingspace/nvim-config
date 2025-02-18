@@ -2,19 +2,17 @@
 
 My ever-evolving config for [neovim](https://neovim.io/)
 
-> [!NOTE]
-> I am a beginner to Vim & Neovim. Still learning how to configure Neovim via Lua, I do not know VimScript
-
 The Platforms I work on daily:
 - Windows
 - Windows Subsystem for Linux (Ubuntu)
 - GNU/Linux (Fedora, Pop!_OS)
+- macOS (arm64)
 
 ## Getting Started
 
 There are some packages that require some items to be installed first. First we install these things, then get the nvim config
 
-1. Install Neovim 0.9.0 or higher (Note - [How to install on Linux](https://gist.github.com/tingspace/3d628593254950f7535b218f32996b85))
+1. Install Neovim 0.10.0 or higher (Note - [How to install on Linux](https://gist.github.com/tingspace/3d628593254950f7535b218f32996b85))
 2. Install `Roboto Mono` font from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 3. Install a C compiler 
     - Windows: [Visual Studio with C++ workloads](https://visualstudio.microsoft.com/vs/features/cplusplus/)
@@ -26,11 +24,11 @@ There are some packages that require some items to be installed first. First we 
 6. Clone this repo into the same path with the directory name as: `nvim`
     *nix:
     ```shell
-    git clone git@github.com:tingspace/nvim-config.git ~/.config/nvim
+    git clone <clone-url> ~/.config/nvim
     ```
     Windows:
     ```powershell
-    git clone git@github.com:tingspace/nvim-config.git "$env:USERPROFILE\AppData\Local\nvim"
+    git clone <clone-url> "$env:USERPROFILE\AppData\Local\nvim"
     ```
 7. `cd` into the new `nvim` directory
 8. Open `nvim` in this directory (Run: `nvim .`)
