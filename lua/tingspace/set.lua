@@ -16,7 +16,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 
 local sysname = vim.loop.os_uname().sysname
-if sysname == "Linux" then
+if sysname == "Linux" or sysname == "Darwin" then
     vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 end
 if sysname == "Windows" then

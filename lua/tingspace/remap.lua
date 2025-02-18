@@ -43,7 +43,7 @@ vim.keymap.set("n", "Q", "<nop>")
 --vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 local os_name = vim.loop.os_uname().sysname
-if os_name == "Linux" then
+if os_name == "Linux" or os_name == "Darwin" then
     vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 end
 
