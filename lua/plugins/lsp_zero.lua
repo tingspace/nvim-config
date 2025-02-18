@@ -90,8 +90,8 @@ return {
                         require('lspconfig').lua_ls.setup(lua_opts)
                     end,
 
-                    tsserver = function()
-                        require('lspconfig').tsserver.setup({
+                    ts_ls = function()
+                        require('lspconfig').ts_ls.setup({
                             single_file_support = false,
                             settings = {
                                 implicitProjectConfiguration = {
@@ -117,7 +117,7 @@ return {
                             on_attach = function(client, bufnr)
                                 vim.api.nvim_create_autocmd('BufWritePre', {
                                     buffer = bufnr,
-                                    callback = function ()
+                                    callback = function()
                                         vim.lsp.buf.format()
                                     end
                                 })
